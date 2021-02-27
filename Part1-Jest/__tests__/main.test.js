@@ -1,16 +1,18 @@
+const formatVolumeIconPath = require('../assets/scripts/main');
+const sum = require('../assets/scripts/main');
 describe('volumeiconvalue', () => {
     test('loud', () => {
-      expect(`./assets/media/icons/volume-level-3.svg`).toMatch(/3/);
+      expect(formatVolumeIconPath(69)).toMatch(/3/);
     });
   
     test('medium', () => {
-        expect(`./assets/media/icons/volume-level-2.svg`).toMatch(/2/);
+        expect(formatVolumeIconPath(34)).toMatch(/2/);
     });
     test('low', () => {
-        expect(`./assets/media/icons/volume-level-1.svg`).toMatch(/1/);
+        expect(formatVolumeIconPath(12)).toMatch(/1/);
     });
     test('mute', () => {
-        expect(`./assets/media/icons/volume-level-0.svg`).toMatch(/0/);
+        expect(formatVolumeIconPath(0)).toMatch(/0/);
     });
     
   });
