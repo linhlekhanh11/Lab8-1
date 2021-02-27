@@ -100,9 +100,8 @@ describe('Party Horn Tests', () => {
     });
   });
 
-  if("Honk button is disabled when the textbox input is non-number", () => {
+  it("Honk button is disabled when the textbox input is non-number", () => {
     cy.get('#volume-number').clear().type('e');
-    // cy.get('#volume-number').invoke('val', a).trigger('input');
 
     cy.get('#honk-btn').then(($el) => {
       expect($el).to.have.attr('disabled');
